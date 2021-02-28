@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: edu.coursera.concurrent.SieveTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.699 sec <<< FAILURE! - in edu.coursera.concurrent.SieveTest
+testActorSieveTwoHundredThousand(edu.coursera.concurrent.SieveTest)  Time elapsed: 0.559 sec  <<< ERROR!
+java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.SieveActor.countPrimes(SieveActor.java:22)
+	at edu.coursera.concurrent.SieveTest.driver(SieveTest.java:20)
+	at edu.coursera.concurrent.SieveTest.testActorSieveTwoHundredThousand(SieveTest.java:65)
+
+testActorSieveOneHundredThousand(edu.coursera.concurrent.SieveTest)  Time elapsed: 0.138 sec  <<< ERROR!
+java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.SieveActor.countPrimes(SieveActor.java:22)
+	at edu.coursera.concurrent.SieveTest.driver(SieveTest.java:20)
+	at edu.coursera.concurrent.SieveTest.testActorSieveOneHundredThousand(SieveTest.java:43)
+

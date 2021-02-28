@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="edu.coursera.concurrent.BoruvkaPerformanceTest" time="57.447" tests="2" errors="2" skipped="0" failures="0">
+  <properties>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64"/>
+    <property name="java.vm.version" value="25.275-b01"/>
+    <property name="java.vm.vendor" value="Private Build"/>
+    <property name="maven.multiModuleProjectDirectory" value="/home/danielhan/Documents/Concurrent-Programming/miniproject_4"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="CA"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/home/danielhan/Documents/Concurrent-Programming/miniproject_4"/>
+    <property name="java.runtime.version" value="1.8.0_275-8u275-b01-0ubuntu1~16.04-b01"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Linux"/>
+    <property name="maven.ext.class.path" value="/home/danielhan/Downloads/idea-IC-192.6262.58/plugins/maven/lib/maven-event-listener.jar"/>
+    <property name="classworlds.conf" value="/home/danielhan/Downloads/idea-IC-192.6262.58/plugins/maven/lib/maven3/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="maven.conf" value="/home/danielhan/Downloads/idea-IC-192.6262.58/plugins/maven/lib/maven3/conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="4.15.0-133-generic"/>
+    <property name="user.home" value="/home/danielhan"/>
+    <property name="user.timezone" value="America/Toronto"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="danielhan"/>
+    <property name="java.class.path" value="/home/danielhan/Downloads/idea-IC-192.6262.58/plugins/maven/lib/maven3/boot/plexus-classworlds-2.6.0.jar:/home/danielhan/Downloads/idea-IC-192.6262.58/lib/idea_rt.jar"/>
+    <property name="idea.version2019.2.1" value="true"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/usr/lib/jvm/java-8-openjdk-amd64/jre"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version2019.2.1 test"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_275"/>
+    <property name="java.ext.dirs" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="securerandom.source" value="file:/dev/./urandom"/>
+    <property name="sun.boot.class.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/classes"/>
+    <property name="java.vendor" value="Private Build"/>
+    <property name="maven.home" value="/home/danielhan/Downloads/idea-IC-192.6262.58/plugins/maven/lib/maven3"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase name="testInputUSAroadFLA" classname="edu.coursera.concurrent.BoruvkaPerformanceTest" time="25.017">
+    <error type="java.lang.AssertionError">java.lang.AssertionError
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.driver(BoruvkaPerformanceTest.java:93)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.testInputUSAroadFLA(BoruvkaPerformanceTest.java:108)
+</error>
+    <system-err><![CDATA[  src/main/resources/boruvka/USA-road-d.FLA.gr.gz - edu.coursera.concurrent.boruvka.sequential.SeqBoruvka - 976
+  src/main/resources/boruvka/USA-road-d.FLA.gr.gz - edu.coursera.concurrent.boruvka.sequential.SeqBoruvka - 790
+  src/main/resources/boruvka/USA-road-d.FLA.gr.gz - edu.coursera.concurrent.boruvka.sequential.SeqBoruvka - 778
+  src/main/resources/boruvka/USA-road-d.FLA.gr.gz - edu.coursera.concurrent.boruvka.sequential.SeqBoruvka - 1047
+  src/main/resources/boruvka/USA-road-d.FLA.gr.gz - edu.coursera.concurrent.boruvka.sequential.SeqBoruvka - 879
+Exception in thread "Thread-0" Exception in thread "Thread-1" Exception in thread "Thread-2" Exception in thread "Thread-3" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-5" Exception in thread "Thread-6" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-4" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-7" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+  src/main/resources/boruvka/USA-road-d.FLA.gr.gz - edu.coursera.concurrent.ParBoruvka - 6
+Exception in thread "Thread-8" Exception in thread "Thread-9" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-15" Exception in thread "Thread-13" Exception in thread "Thread-12" Exception in thread "Thread-14" Exception in thread "Thread-11" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-10" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+  src/main/resources/boruvka/USA-road-d.FLA.gr.gz - edu.coursera.concurrent.ParBoruvka - 369
+Exception in thread "Thread-16" Exception in thread "Thread-18" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-17" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-19" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-20" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-21" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-22" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-23" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+  src/main/resources/boruvka/USA-road-d.FLA.gr.gz - edu.coursera.concurrent.ParBoruvka - 15
+Exception in thread "Thread-24" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-25" Exception in thread "Thread-28" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-31" Exception in thread "Thread-26" Exception in thread "Thread-29" Exception in thread "Thread-30" Exception in thread "Thread-27" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+  src/main/resources/boruvka/USA-road-d.FLA.gr.gz - edu.coursera.concurrent.ParBoruvka - 4
+Exception in thread "Thread-32" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-33" Exception in thread "Thread-35" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-37" Exception in thread "Thread-39" Exception in thread "Thread-34" Exception in thread "Thread-38" Exception in thread "Thread-36" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+  src/main/resources/boruvka/USA-road-d.FLA.gr.gz - edu.coursera.concurrent.ParBoruvka - 8
+]]></system-err>
+  </testcase>
+  <testcase name="testInputUSAroadNE" classname="edu.coursera.concurrent.BoruvkaPerformanceTest" time="32.43">
+    <error type="java.lang.AssertionError">java.lang.AssertionError
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.driver(BoruvkaPerformanceTest.java:93)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.testInputUSAroadNE(BoruvkaPerformanceTest.java:119)
+</error>
+    <system-err><![CDATA[  src/main/resources/boruvka/USA-road-d.NE.gr.gz - edu.coursera.concurrent.boruvka.sequential.SeqBoruvka - 1378
+  src/main/resources/boruvka/USA-road-d.NE.gr.gz - edu.coursera.concurrent.boruvka.sequential.SeqBoruvka - 1533
+  src/main/resources/boruvka/USA-road-d.NE.gr.gz - edu.coursera.concurrent.boruvka.sequential.SeqBoruvka - 1240
+  src/main/resources/boruvka/USA-road-d.NE.gr.gz - edu.coursera.concurrent.boruvka.sequential.SeqBoruvka - 1391
+  src/main/resources/boruvka/USA-road-d.NE.gr.gz - edu.coursera.concurrent.boruvka.sequential.SeqBoruvka - 1213
+Exception in thread "Thread-40" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-41" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-44" Exception in thread "Thread-43" Exception in thread "Thread-42" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-46" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-45" Exception in thread "Thread-47" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+  src/main/resources/boruvka/USA-road-d.NE.gr.gz - edu.coursera.concurrent.ParBoruvka - 2
+Exception in thread "Thread-48" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-49" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-52" Exception in thread "Thread-51" Exception in thread "Thread-50" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-53" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-54" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-55" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+  src/main/resources/boruvka/USA-road-d.NE.gr.gz - edu.coursera.concurrent.ParBoruvka - 13
+Exception in thread "Thread-56" Exception in thread "Thread-57" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-58" Exception in thread "Thread-59" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-61" Exception in thread "Thread-63" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-60" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-62" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+  src/main/resources/boruvka/USA-road-d.NE.gr.gz - edu.coursera.concurrent.ParBoruvka - 2
+Exception in thread "Thread-64" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-65" Exception in thread "Thread-67" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-70" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-66" Exception in thread "Thread-68" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-69" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-71" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+  src/main/resources/boruvka/USA-road-d.NE.gr.gz - edu.coursera.concurrent.ParBoruvka - 2
+Exception in thread "Thread-72" Exception in thread "Thread-75" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-74" Exception in thread "Thread-73" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-76" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-78" Exception in thread "Thread-77" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-79" java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+java.lang.UnsupportedOperationException
+	at edu.coursera.concurrent.ParBoruvka.computeBoruvka(ParBoruvka.java:31)
+	at edu.coursera.concurrent.BoruvkaPerformanceTest.lambda$driver$0(BoruvkaPerformanceTest.java:72)
+	at java.lang.Thread.run(Thread.java:748)
+  src/main/resources/boruvka/USA-road-d.NE.gr.gz - edu.coursera.concurrent.ParBoruvka - 513
+]]></system-err>
+  </testcase>
+</testsuite>

@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: edu.coursera.parallel.OneDimAveragingPhaserTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 308.098 sec <<< FAILURE! - in edu.coursera.parallel.OneDimAveragingPhaserTest
+testFuzzyBarrier(edu.coursera.parallel.OneDimAveragingPhaserTest)  Time elapsed: 308.097 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: Mismatch on output at element 786372, ref[i]=6.233447016580873E-5, output[i]=6.232438822821417E-5 expected:<6.233447016580873E-5> but was:<6.232438822821417E-5>
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.failNotEquals(Assert.java:280)
+	at junit.framework.Assert.assertEquals(Assert.java:98)
+	at edu.coursera.parallel.OneDimAveragingPhaserTest.checkResult(OneDimAveragingPhaserTest.java:92)
+	at edu.coursera.parallel.OneDimAveragingPhaserTest.parTestHelper(OneDimAveragingPhaserTest.java:122)
+	at edu.coursera.parallel.OneDimAveragingPhaserTest.testFuzzyBarrier(OneDimAveragingPhaserTest.java:139)
+
